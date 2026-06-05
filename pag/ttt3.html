@@ -1,108 +1,477 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>I Trimestre</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Felizes</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Verdana, sans-serif;
+}
 
-    body {
-      background: #4c5156;
-    }
+body{
+background:#f8f5ef;
+}
 
-    
-    .header {
-      position: sticky;
-      top: 0;
-      
-      padding: 15px 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+/* NAV */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:white;
+box-shadow:0 2px 5px rgba(0,0,0,0.05);
+}
 
-    .header h1 a {
-      color: #fff;
-      text-decoration: none;
-    }
+.logo{
+font-size:28px;
+color:#ff4d6d;
+font-weight:bold;
+}
 
-    nav {
-      display: flex;
-      gap: 10px;
-      
-    }
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+color:#555;
+}
 
-    nav a {
-      text-decoration: none;
-      padding: 8px 16px;
-      background: #111111;
-      color: #fff;
-      border-radius: 6px;
-      font-weight: bold;
-      align-items: center;
-    }
+.nav-btns button{
+padding:8px 18px;
+border-radius:20px;
+border:1px solid #ff4d6d;
+background:transparent;
+color:#ff4d6d;
+cursor:pointer;
+margin-left:10px;
+}
 
-  
-    main {
-      padding: 40px;
-    }
+.register{
+background:#ff4d6d;
+color:white;
+}
 
-    .trimestre-box {
-      
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+/* HERO */
+.hero{
+height:90vh;
+background:linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.4)),
+url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') center/cover;
+display:flex;
+align-items:center;
+padding:0 80px;
+}
 
-    .trimestre-box h2 {
-      margin-bottom: 25px;
-      color: #000000;
-    }
+.content{
+max-width:600px;
+}
 
-  
-    .trabalhos {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
+.content h1{
+font-size:48px;
+color:#ff4d6d;
+margin-bottom:20px;
+}
 
-    .trabalhos a {
-      padding: 15px 20px;
-      background: #060606;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
+.content p{
+font-size:20px;
+color:#444;
+margin-bottom:30px;
+}
 
-    .trabalhos a:hover {
-      background: #38f848;
-      color: #000;
-    }
-  </style>
+.options button{
+display:block;
+margin-bottom:15px;
+padding:12px 25px;
+border-radius:25px;
+border:2px solid #ff4d6d;
+background:white;
+color:#ff4d6d;
+cursor:pointer;
+width:250px;
+}
+
+
+.container{
+max-width:1000px;
+margin:20px auto;
+background:rgb(238, 230, 230);
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+
+h1{
+text-align:center;
+margin-bottom:20px;
+}
+
+label{
+display:block;
+margin-top:10px;
+font-weight:bold;
+}
+
+input,select{
+width:100%;
+padding:10px;
+margin-top:5px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.trimestre{
+margin-top:20px;
+padding:15px;
+border:1px solid #ddd;
+border-radius:8px;
+}
+
+.row{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+}
+
+button{
+margin-top:20px;
+padding:12px;
+width:100%;
+background:#ff2e63;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+opacity:.9;
+}
+
+.limpar{
+background:red;
+margin-bottom:15px;
+}
+
+.tabela-container{
+width:100%;
+overflow:auto;
+margin-top:30px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+}
+
+th{
+background:rgb(173, 32, 79);
+color:white;
+}
+
+th,td{
+border:1px solid #ccc;
+padding:8px;
+text-align:center;
+color:black;
+}
+
+h2{
+text-align:center;
+margin:30px 0 15px;
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+gap:15px;
+padding:20px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.row{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-<header class="header">
-  <h1><a href="../index.html">HOME</a></h1>
+<nav>
+<div class="logo">TLP</div>
 
-  <nav>
-    <a href="trimestre1.html">Iº Trim.</a>
-    <a href="trimestre2.html">IIº Trim.</a>
-    <a href="trimestre3.html">IIIº Trim.</a>
-  </nav>
-</header>
+<ul>
+<li><a href="../index.html">Inicio</a></li>
+</ul>
 
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus sed maxime, ab alias assumenda possimus ullam in aperiam unde dolor, animi, dolorum 
-  obcaecati recusandae rem. Ab eligendi ipsum tempora a!</p>
+<div class="nav-btns">
+<button class="register"><a href="ttt2.html">Próxima tarefa</a></button>
+</div>
+</nav>
+
+    
+<div class="container">
+
+  <h1>Cadastro de Notas</h1>
+  
+  <form id="formulario">
+  
+  <label>Nome do Aluno</label>
+  <input type="text" id="nome" required>
+  
+  <label>Disciplina</label>
+  <select id="disciplina" required>
+  <option value="">Selecione</option>
+  <option>Matemática</option>
+  <option>TLP</option>
+  <option>Sistema de Informação</option>
+  <option>IAG</option>
+  <option>Empreendedorismo</option>
+  <option>Projecto Tecnológico</option>
+  </select>
+  
+  <div class="trimestre">
+  <h3>I Trimestre</h3>
+  
+  <div class="row">
+  <div>
+  <label>MAC</label>
+  <input type="number" id="mac1">
+  </div>
+  
+  <div>
+  <label>PP</label>
+  <input type="number" id="pp1">
+  </div>
+  
+  <div>
+  <label>PT</label>
+  <input type="number" id="pt1">
+  </div>
+  </div>
+  </div>
+  
+  <div class="trimestre">
+  <h3>II Trimestre</h3>
+  
+  <div class="row">
+  <div>
+  <label>MAC</label>
+  <input type="number" id="mac2">
+  </div>
+  
+  <div>
+  <label>PP</label>
+  <input type="number" id="pp2">
+  </div>
+  
+  <div>
+  <label>PT</label>
+  <input type="number" id="pt2">
+  </div>
+  </div>
+  </div>
+  
+  <div class="trimestre">
+  <h3>III Trimestre</h3>
+  
+  <div class="row">
+  <div>
+  <label>MAC</label>
+  <input type="number" id="mac3">
+  </div>
+  
+  <div>
+  <label>PP</label>
+  <input type="number" id="pp3">
+  </div>
+  
+  <div>
+  <label>PT</label>
+  <input type="number" id="pt3">
+  </div>
+  </div>
+  </div>
+  
+  <button type="submit">Guardar Dados</button>
+  
+  </form>
+  
+  <h2>Tabela de Notas</h2>
+  
+  <button class="limpar" onclick="limparDados()">
+  Limpar Todos os Dados
+  </button>
+  
+  <div class="tabela-container">
+  
+  <table>
+  
+  <thead>
+  <tr>
+  <th>Aluno</th>
+  <th>Disciplina</th>
+  
+  <th>MAC T1</th>
+  <th>PP T1</th>
+  <th>PT T1</th>
+  
+  <th>MAC T2</th>
+  <th>PP T2</th>
+  <th>PT T2</th>
+  
+  <th>MAC T3</th>
+  <th>PP T3</th>
+  <th>PT T3</th>
+  
+  <th>Média Final</th>
+  <th>Resultado</th>
+  </tr>
+  </thead>
+  
+  <tbody id="corpoTabela"></tbody>
+  
+  </table>
+  
+  </div>
+  
+  </div>
+  
+  <script>
+  
+  function carregarTabela(){
+  
+  let dados = JSON.parse(localStorage.getItem("notas")) || [];
+  
+  let tabela = document.getElementById("corpoTabela");
+  
+  tabela.innerHTML = "";
+  
+  dados.forEach(item=>{
+  
+  let notas = [
+  Number(item.mac1 || 0),
+  Number(item.pp1 || 0),
+  Number(item.pt1 || 0),
+  Number(item.mac2 || 0),
+  Number(item.pp2 || 0),
+  Number(item.pt2 || 0),
+  Number(item.mac3 || 0),
+  Number(item.pp3 || 0),
+  Number(item.pt3 || 0)
+  ];
+  
+  let soma = notas.reduce((total, nota)=> total + nota, 0);
+  
+  let media = (soma/notas.length).toFixed(1);
+  
+  let resultado="";
+  let cor="";
+  
+  if(media < 7){
+  resultado="Reprovado";
+  cor="red";
+  }
+  else if(media >= 10){
+  resultado="Aprovado";
+  cor="green";
+  }
+  else{
+  resultado="Recurso";
+  cor="orange";
+  }
+  
+  tabela.innerHTML += `
+  <tr>
+  <td>${item.nome}</td>
+  <td>${item.disciplina}</td>
+  
+  <td>${item.mac1}</td>
+  <td>${item.pp1}</td>
+  <td>${item.pt1}</td>
+  
+  <td>${item.mac2}</td>
+  <td>${item.pp2}</td>
+  <td>${item.pt2}</td>
+  
+  <td>${item.mac3}</td>
+  <td>${item.pp3}</td>
+  <td>${item.pt3}</td>
+  
+  <td><strong>${media}</strong></td>
+  
+  <td style="color:${cor};font-weight:bold;">
+  ${resultado}
+  </td>
+  
+  </tr>
+  `;
+  
+  });
+  
+  }
+  
+  document.getElementById("formulario").addEventListener("submit", function(e){
+  
+  e.preventDefault();
+  
+  let dados = JSON.parse(localStorage.getItem("notas")) || [];
+  
+  dados.push({
+  
+  nome: document.getElementById("nome").value,
+  disciplina: document.getElementById("disciplina").value,
+  
+  mac1: document.getElementById("mac1").value,
+  pp1: document.getElementById("pp1").value,
+  pt1: document.getElementById("pt1").value,
+  
+  mac2: document.getElementById("mac2").value,
+  pp2: document.getElementById("pp2").value,
+  pt2: document.getElementById("pt2").value,
+  
+  mac3: document.getElementById("mac3").value,
+  pp3: document.getElementById("pp3").value,
+  pt3: document.getElementById("pt3").value
+  
+  });
+  
+  localStorage.setItem("notas", JSON.stringify(dados));
+  
+  alert("Dados guardados com sucesso!");
+  
+  this.reset();
+  
+  carregarTabela();
+  
+  });
+  
+  function limparDados(){
+  
+  if(confirm("Deseja apagar todos os registos?")){
+  
+  localStorage.removeItem("notas");
+  
+  carregarTabela();
+  
+  }
+  
+  }
+  
+  carregarTabela();
+  
+  </script>
+  
 </body>
 </html>
