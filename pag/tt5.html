@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Felizes</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Verdana, sans-serif;
+}
+
+body{
+background:#f8f5ef;
+}
+
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:white;
+box-shadow:0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo{
+font-size:28px;
+color:#ff4d6d;
+font-weight:bold;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+color:#555;
+}
+
+.nav-btns button{
+padding:8px 18px;
+border-radius:20px;
+border:1px solid #ff4d6d;
+background:transparent;
+color:#ff4d6d;
+cursor:pointer;
+margin-left:10px;
+}
+
+.register{
+background:#ff4d6d;
+color:white;
+}
+ 
+
+ .ab{
+    margin: 10%;
+  } 
+
+  .tr{
+    margin: 10%;
+  } 
+
+
+ 
+   .cards {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 20px;
+            background: white;
+        }
+
+        .card {
+            width: 30%;
+           
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+.cardi {
+           
+            width: 100%;
+            height: 460px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 15px;
+}
+
+         
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+       
+        .conteudo {
+            display: flex;
+            gap: 20px;
+            padding: 40px 20px;
+        }
+
+        .box-texto {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            width: 50%;
+        }
+
+        .box-texto h2 {
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+
+        footer {
+            background-color: #a01297ff;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+
+ .titulo {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #0f172a;
+    }
+
+ 
+
+    .listas {
+      margin-bottom: 50px;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .listas h2 {
+      color: #c70285ff;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-left: 25px;
+      margin-bottom: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      color: #0f172a;
+      list-style: square;
+    }
+
+    ol {
+      margin-left: 25px;
+    }
+
+    ol li {
+      margin-bottom: 8px;
+      color: #0f172a;
+      font-weight: 500;
+    }
+ 
+
+    .tabelas {
+      background: #975382ff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .tabelas h2 {
+      color: #0284c7;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+
+    th {
+      background: #c70278ff;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #bae6fd;
+      color: #0f172a;
+    }
+
+    tr:nth-child(even) {
+      background: #f1f5f9;
+    }
+
+    caption {
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #0f172a;
+    }
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">TLP</div>
+
+<ul>
+<li><a href="../index.html">Início</a></li>
+  <li><a href="trimestre1.html">Voltar</a></li>
+</ul>
+
+<div class="nav-btns">
+<button class="register"><a href="trimestre3.html">Próximo Trimestre</a></button>
+</div>
+</nav>
+ 
+
+<div class="tr">
+    <h1>CONTEÚDO: INTRODUÇÃO AO CSS</h1><br>
+    <p><strong>1. O que é CSS?</strong></p><br>
+    <p>CSS significa Cascading Style Sheets (Folhas de Estilo em Cascata).
+O CSS é uma linguagem usada para dar estilo às páginas Web criadas com HTML.
+Enquanto o HTML serve para estruturar o conteúdo (textos, imagens, botões),
+ o CSS é responsável pela aparência visual da página.</p><br>
+
+  <p><strong>Exemplos do que o CSS faz:</strong></p><br>
+    <p>• Mudar cores dos textos;<br>
+• Alterar o tamanho das letras;<br>
+• Definir cores de fundo;<br>
+• Posicionar elementos na página.</p><br>
+
+  <p><strong>2. Importância do CSS no Desenvolvimento Web <br> <br> 
+    O CSS é muito importante porque:</strong></p><br>
+    <p>• Melhora a aparência dos sites, tornando-os mais bonitos 
+      e organizados;<br>
+• Facilita a leitura do conteúdo;<br>
+• Permite a separação entre conteúdo e design: o HTML → conteúdo
+o CSS → aparência<br>
+• Ajuda a manter e actualizar os sites com mais facilidade;<br>
+• Garante uma melhor experiência do utilizad</p><br>
+
+ <p><strong>3. Tipos de Folhas de Estilo CSS <br> <br> 
+  Existem três formas principais de aplicar CSS em uma página HTML: <br> <br>
+3.1 CSS Inline</strong></p><br>
+    <p>O CSS inline é aplicado directamente dentro da tag HTML.
+Exemplo:
+<"p style="color: blue;">"Este texto é azul<"/p></p><br>
+<p>
+  Características: <br>
+• É simples e rápido;<br>
+• Serve para pequenas alterações;<br>
+• Não é recomendado para páginas grandes<br>
+</p>
+
+ <p><strong>3.2 CSS Interna (Internal CSS) <br> <br> 
+ <p>
+  O CSS interno é escrito dentro da própria página HTML, 
+  usando a tag <!style>. <br>
+Exemplo: <br>
+<"style><br>
+ p {<br>
+ color: green;<br>
+ }<br>
+</"style><br>
+ </p><br>
+
+ <p>
+  Características:<br>
+• Organiza melhor o código que o CSS inline;<br>
+• Aplica estilo a vários elementos ao mesmo tempo;<br>
+• É usado quando o estilo é apenas para uma página<br>
+ </p>
+    
+  </div>
+
+  <div class="ab">
+<h1>SINTAXE BÁSICA DO CSS E SELETORES</h1><br>
+
+    <p><strong>1. Sintaxe Básica do CSS</strong></p><br>
+
+    <p>
+      O CSS é escrito através de regras de estilo.
+      Cada regra é composta por um seletor e um bloco de declarações.
+      O seletor indica qual elemento HTML será estilizado,
+      enquanto as declarações definem como esse elemento irá aparecer.
+    </p><br>
+
+    <p><strong>Estrutura básica de uma regra CSS:</strong></p><br>
+
+    <p>
+      seletor { <br>
+      &nbsp;&nbsp;propriedade: valor; <br>
+      }
+    </p><br>
+
+    <p>
+      Exemplos do que compõe a sintaxe do CSS:<br>
+      • Seletor – escolhe o elemento HTML;<br>
+      • Propriedade – define o que será alterado;<br>
+      • Valor – indica como será a alteração;<br>
+      • Cada declaração termina com ponto e vírgula (;).<br>
+    </p><br>
+  </div><br>
+
+  <div class="ab">
+    <p><strong>2. Seletores Simples em CSS <br><br>
+      Os seletores são usados para indicar quais elementos HTML receberão estilo.
+      Os principais seletores simples são:</strong>
+    </p><br>
+
+    <p>
+      • Seletor de elemento (tag): seleciona elementos pelo nome da tag;<br>
+      • Seletor de classe: seleciona elementos que possuem uma classe específica;<br>
+      • Seletor de ID: seleciona um elemento com identificador único;<br>
+      • Seletor universal: seleciona todos os elementos da página.<br>
+    </p><br>
+  </div><br>
+
+  <div class="ab">
+    <p><strong>3. Tipos de Seletores Simples <br><br>
+      3.1 Seletor de Elemento</strong>
+    </p><br>
+
+    <p>
+      O seletor de elemento utiliza o nome da tag HTML
+      e aplica o estilo a todos os elementos desse tipo.
+      <br><br>
+      Exemplo:
+    </p>
+
+    <p>
+      p { <br>
+      &nbsp;&nbsp;color: blue; <br>
+      }
+    </p><br>
+
+    <p>
+      Características:<br>
+      • Aplica o estilo a todas as tags iguais;<br>
+      • É simples e muito utilizado;<br>
+      • Possui baixa prioridade em relação a classes e IDs.<br>
+    </p><br>
+  </div><br>
+
+  <div class="ab">
+    <p><strong>3.2 Seletor de Classe</strong></p><br>
+
+    <p>
+      O seletor de classe é identificado por um ponto (.)
+      e permite aplicar estilos a vários elementos diferentes.
+      <br><br>
+      Exemplo:
+    </p>
+
+    <p>
+      .texto { <br>
+      &nbsp;&nbsp;font-size: 18px; <br>
+      }
+    </p><br>
+
+    <p>
+      Características:<br>
+      • Pode ser reutilizado em vários elementos;<br>
+      • Usa o ponto (.) antes do nome;<br>
+      • É muito comum no desenvolvimento web.<br>
+    </p><br>
+  </div><br>
+      <div class="ab">
+    <p><strong>3.3 Seletor de ID</strong></p><br>
+
+    <p>
+      O seletor de ID utiliza o símbolo # e identifica
+      um único elemento na página HTML.
+      <br><br>
+      Exemplo:
+    </p>
+
+    <p>
+      #principal { <br>
+      &nbsp;&nbsp;background-color: lightgray; <br>
+      }
+    </p><br>
+
+    <p>
+      Características:<br>
+      • Deve ser único na página;<br>
+      • Usa o símbolo #;<br>
+      • Possui maior prioridade que classes e elementos.<br>
+    </p><br>
+</div>
+
+<div class="nav-btns">
+<button class="register"><a href="trimestre3.html">Próximo Trimestre</a></button>
+</div>
+</nav>
+ 
+<section class="cards">
+    <div >
+        <img src="../files/616826849_1671342261128655_8026825650609518439_n.jpg" class="cardi"> 
+        
+      </div>
+
+    <div  >
+        <img src="../files/616227972_1671342214461993_6898149563198532956_n.jpg"  class="cardi">
+         
+      </div>
+<div  >
+        <img src="../files/615790680_1671342204461994_6739845663171793372_n.jpg"  class="cardi">
+         
+      </div>
+    
+</section>
+
+<section class="conteudo">
+    <div class="box-texto">
+       
+        <p>
+           Para obter o visual de cachos misturado às tranças, as goddess e gypsy braids usam a técnica de entrelace, que é um tipo de aplique que costura a fibra sintética à raiz do cabelo. O resultado é um efeito bem natural, similar ao cabelo natural.
+
+Esse método também é ideal para mulheres em transição capilar que não querem esperar o cabelo crescer para alcançar o efeito desejado. 
+
+O entrelace proporciona um acabamento bonito de maneira relativamente rápida, permitindo que desfrutem de um novo visual sem uma espera muito lon
+        </p>
+    </div>
+
+    <div class="box-texto">
+        
+        <p>
+        Que as box braids permitem que você utilize uma variedade imensa de penteados, isso você já deve saber, e advinha só: esse benefício também vale para as tranças com cachos, já que esse estilo mistura fios soltos com curvatura junto com as tranças tradicionais. 
+
+Se liga no exemplo da embaixadora Carol Mamprin, que apostou em um meio-preso simples, mas que ganhou um status bem mais elaborado graças aos cachos incorporados nas tranças. 
+
+Além do meio-preso, você pode experimentar outros penteados para cabelos cacheados com trança  
+        </p>
+    </div>
+</section>
+
+  <div class="titulo">
+    <h1>Listas e Tabelas em HTML</h1>
+  </div>
+
+ 
+  <section class="listas">
+    <h2>O que você quer saber?</h2>
+    <ul>
+      <li> Cuidados</li>
+      <li>Coloração</li>
+      <li>Cortes</li>
+       <li>Penteados</li>
+    </ul>
+
+    <h2>Como fazer o cronograma capilar?</h2>
+    <ol>
+      <li>Stories</li>
+      <li>Loja Salon Line</li>
+      <li>#TôDeCacho</li>
+    </ol>
+  </section>
+
+ 
+  <section class="tabelas">
+    <h2>Tabela Simples</h2>
+    <table>
+      <caption>Notas dos Alunos</caption>
+      <tr>
+        <th>Cliente</th>
+        <th>Trança</th>
+        <th>Preço</th>
+      </tr>
+      <tr>
+        <td>Antonica</td>
+        <td>TôDeCacho</td>
+        <td>10.000</td>
+      </tr>
+      <tr>
+        <td>Kiangala</td>
+        <td> Stories</td>
+        <td>16.000</td>
+      </tr>
+    </table>
+
+    <h2>Tabela Mesclada</h2>
+    <table>
+      <caption>Horário Escolar</caption>
+      <tr>
+        <th>Dia</th>
+        <th colspan="2">Manhã</th>
+      </tr>
+      <tr>
+        <td rowspan="2">Segunda</td>
+        <td>TôDeCacho</td>
+        <td>Stories   </td>
+      </tr>
+      <tr>
+        <td colspan="2">Tranças</td>
+      </tr>
+    </table>
+  </section>
+
+<footer>
+ 
+    <p>Antonica Kiangala Coxe</p>
+</footer>
+
+</body>
+</html>

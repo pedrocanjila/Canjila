@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Felizes</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Verdana, sans-serif;
+}
+
+body{
+background:#f8f5ef;
+}
+
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:white;
+box-shadow:0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo{
+font-size:28px;
+color:#ff4d6d;
+font-weight:bold;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+color:#555;
+}
+
+.nav-btns button{
+padding:8px 18px;
+border-radius:20px;
+border:1px solid #ff4d6d;
+background:transparent;
+color:#ff4d6d;
+cursor:pointer;
+margin-left:10px;
+}
+
+.register{
+background:#ff4d6d;
+color:white;
+}
+ 
+
+ .titulo {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #0f172a;
+    }
+
+ 
+
+    .listas {
+      margin-bottom: 50px;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .listas h2 {
+      color: #c70285ff;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-left: 25px;
+      margin-bottom: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      color: #0f172a;
+      list-style: square;
+    }
+
+    ol {
+      margin-left: 25px;
+    }
+
+    ol li {
+      margin-bottom: 8px;
+      color: #0f172a;
+      font-weight: 500;
+    }
+ 
+
+    .tabelas {
+      background: #975382ff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .tabelas h2 {
+      color: #0284c7;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+
+    th {
+      background: #c70278ff;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #bae6fd;
+      color: #0f172a;
+    }
+
+    tr:nth-child(even) {
+      background: #f1f5f9;
+    }
+
+    caption {
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #0f172a;
+    }
+
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">TLP</div>
+
+<ul>
+<li><a href="../index.html">Início</a></li>
+  <li><a href="trimestre1.html">Voltar</a></li>
+</ul>
+
+<div class="nav-btns">
+<button class="register"><a href="trimestre3.html">Próximo Trimestre</a></button>
+</div>
+</nav>
+ 
+<main>
+
+  <div class="titulo">
+    <h1>Listas e Tabelas em HTML</h1>
+  </div>
+
+ 
+  <section class="listas">
+    <h2>O que você quer saber?</h2>
+    <ul>
+      <li> Cuidados</li>
+      <li>Coloração</li>
+      <li>Cortes</li>
+       <li>Penteados</li>
+    </ul>
+
+    <h2>Como fazer o cronograma capilar?</h2>
+    <ol>
+      <li>Stories</li>
+      <li>Loja Salon Line</li>
+      <li>#TôDeCacho</li>
+    </ol>
+  </section>
+
+ 
+  <section class="tabelas">
+    <h2>Tabela Simples</h2>
+    <table>
+      <caption>Notas dos Alunos</caption>
+      <tr>
+        <th>Cliente</th>
+        <th>Trança</th>
+        <th>Preço</th>
+      </tr>
+      <tr>
+        <td>Antonica</td>
+        <td>TôDeCacho</td>
+        <td>10.000</td>
+      </tr>
+      <tr>
+        <td>Kiangala</td>
+        <td> Stories</td>
+        <td>16.000</td>
+      </tr>
+    </table>
+
+    <h2>Tabela Mesclada</h2>
+    <table>
+      <caption>Horário Escolar</caption>
+      <tr>
+        <th>Dia</th>
+        <th colspan="2">Manhã</th>
+      </tr>
+      <tr>
+        <td rowspan="2">Segunda</td>
+        <td>TôDeCacho</td>
+        <td>Stories   </td>
+      </tr>
+      <tr>
+        <td colspan="2">Tranças</td>
+      </tr>
+    </table>
+  </section>
+
+</main>
+
+</body>
+</html>
